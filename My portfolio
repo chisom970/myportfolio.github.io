@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <title>Anointing Okwaraejesu - Portfolio</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+    *{
+      padding: 0;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body{
+      background: black;
+    }
+
+    a{
+      text-decoration: none;
+      color: white;
+    }
+
+    .navbar{
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      padding: 25px 9%;
+      background: black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .navbar .logo{
+      font-size: 29px;
+      font-weight: 600;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .navbar ul {
+      display: flex;
+    }
+
+    .navbar ul li{
+      list-style: none;
+      margin-left: 35px;
+    }
+
+    .navbar ul li a{
+      font-size: 20px;
+      font-weight: 500;
+      transition: .5s ease;
+    }
+
+    .navbar ul li:hover a,
+    .navbar ul li.active a{
+      color: rgb(47, 226, 56);
+    }
+
+    .home{
+      padding: 60px 9% 0;
+      height: 100vh;
+      display: flex;
+      color: white;
+      align-items: center;
+    }
+
+    .home-info h1{
+      font-size: 50px;
+    }
+
+    .home-info h2{
+      font-size: 27px;
+      margin: -10px;
+      padding-left: 10px;
+    }
+    
+    .home-info p{
+      font-size: 18px;
+      margin: 10px 0 25px;
+    }
+
+    .home-info .btn-sci{
+      display: flex;
+      align-items: center;
+    }
+
+    .btn-sci .btn{
+      display: inline-block;
+      background: rgb(47, 226, 56);
+      padding: 10px 30px;
+      border-radius: 40px;
+      box-shadow:0 0 8px rgb(47, 226, 56);
+      border: 2px solid rgb(47, 226, 56);
+      font-size: 16px;
+      font-weight: 600;
+      color: black;
+      transition: .5s ease;
+      margin-right: 35px;
+    }
+
+    .btn:hover{
+      background:transparent;
+      color: rgb(47, 226, 56);
+      box-shadow: none;
+    }
+
+.sci {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start; 
+  align-items: center;
+  margin-top: 30px; 
+}
+
+.sci a {
+  width: 45px;
+  height: 45px;
+  background: rgb(0, 0, 0);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:rgb(47, 226, 56); 
+  font-size: 20px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 0 8px rgb(47, 226, 56);
+  margin-bottom: 25px;
+}
+
+.sci a:hover {
+  background: rgb(47, 226, 56);
+  color: rgb(0, 0, 0);
+  transform: scale(1.15);
+}
+
+
+.home-img .img-box {
+  width: 32vw;
+  height: 32vw;
+  background: rgb(47, 226, 56);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 3px; 
+  margin-left: 60px;
+}
+
+
+.home-img .img-box .img-item {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-img .img-box .img-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center top; 
+  border-radius: 50%;
+}
+
+
+#role {
+  color: rgb(47, 226, 56);
+  font-weight: bold;
+}
+
+#cursor {
+  color: rgb(47, 226, 56);
+  font-weight: bold;
+}
+
+body {
+  animation: zoomIn 2s ease-out;
+  transform-origin: center;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ======= MOBILE RESPONSIVENESS ======= */
+
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 5%;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+
+  .navbar ul li {
+    margin: 10px 15px 0 0;
+  }
+
+  .home {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    padding: 100px 5% 50px;
+    margin-top: 90px;
+    margin-right: 70px;
+  }
+
+  .home-info {
+    margin-top: 30px;
+  }
+
+  .home-info h1 {
+    font-size: 36px;
+    margin-bottom: 7px;
+  }
+
+  .home-info h2 {
+    font-size: 22px;
+  }
+
+  .home-info p {
+    font-size: 16px;
+  }
+
+  .btn-sci {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .sci {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .home-img .img-box {
+    width: 65vw;
+    height: 65vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar .logo {
+    font-size: 22px;
+  }
+
+  .navbar ul li a {
+    font-size: 16px;
+  }
+
+  .home {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    padding: 90px 6% 40px;
+    height: auto;
+    margin-top: 50px;
+    margin-right: 50px;
+  }
+
+  .home-info h1 {
+    font-size: 28px;
+    margin-left: 50px;
+  }
+
+  .home-info h2 {
+    font-size: 18px;
+    margin-bottom: 19px;
+  }
+
+
+  .home-info p {
+    font-size: 15px;
+    line-height: 1.6;
+   margin-left: 50px;
+  }
+
+  .home-img .img-box {
+    width: 75vw;
+    height: 75vw;
+  }
+
+  .btn-sci .btn {
+    font-size: 16px;
+    padding: 12px 30px;
+    margin-bottom: 7px;
+    margin-left: 80px;
+  }
+
+.btn-sci .sci{
+  font-size: 16px;
+    padding: 12px 30px;
+    margin-bottom: 15px;
+    margin-left: 40px;
+
+}
+}
+
+/* Perfect Mobile View (425px and below) */
+@media (max-width: 425px) {
+
+
+  /* Navbar */
+  .navbar .logo {
+    font-size: 22px;
+  }
+
+  .navbar ul {
+    display: inline-flex;
+    gap: 1px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  
+  }
+
+  .navbar ul li a {
+    font-size: 14px;
+  }
+
+  /* Home Section */
+  .home {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    padding: 90px 6% 40px;
+    height: auto;
+    margin-top: 50px;
+    margin-right: 10px;
+  }
+
+  /* Image Box (same clean circle look) */
+  .home-img .img-box {
+    width: 75vw;
+    height: 75vw;
+    margin: 0 auto 25px;
+  }
+
+  .home-img .img-box .img-item img {
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  /* Texts (just like the 900 view, readable and bold) */
+  .home-info h1 {
+    font-size: 38px;
+    line-height: 1.3;
+    margin-right: 48px;
+  }
+
+  .home-info h2 {
+    font-size: 22px;
+    margin-top: 5px;
+  }
+
+  .home-info p {
+    font-size: 17px;
+    margin: 25px 0 25px;
+    line-height: 1.8;
+  }
+
+  /* Buttons */
+  .btn-sci .btn {
+    font-size: 16px;
+    padding: 12px 30px;
+    margin-bottom: 8px;
+    margin-right: 68px;
+  }
+  
+  .btn-sci .sci{
+    margin-right: 48px;
+  }
+}
+
+</style>
+  
+
+<body>
+  
+  <nav class="navbar">
+    <a href="#" class="logo">Anointing.</a>
+    <ul>
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Service</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+  </nav>
+
+  <section class="home">
+    <div class="home-info">
+      <h1>Anointing Okwaraejesu</h1>
+      <h2>I'm a <span id="role"></span><span id="cursor">|</span></h2>
+
+    <p>I’m a dedicated Virtual Assistant specializing in customer support and client communication.
+I help businesses manage emails, handle inquiries, and maintain a positive customer experience.
+With strong attention to detail and a friendly approach, I ensure every interaction builds trust.
+My goal is to help you stay organized and focused while your customers feel valued and supported.</p>
+      <div class="btn-sci">
+        <a href="#" class="btn">Download CV</a>
+        <div class="sci">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-img">
+      <div class="img-box">
+        <div class="img-item">
+          <img src="home.png.png" alt="Anointing Okwaraejesu">
+
+      </div>
+    </div>
+  </div>
+
+  </section>
+  <script>
+const roles = ["Freelancer", "YouTuber", "Virtual Assistant", "Graphic Designer"];
+let roleIndex = 0;
+let charIndex = 0;
+const roleElement = document.getElementById("role");
+const cursor = document.getElementById("cursor");
+
+function type() {
+  if (charIndex < roles[roleIndex].length) {
+    roleElement.textContent += roles[roleIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, 120);
+  } else {
+    setTimeout(erase, 1500);
+  }
+}
+
+function erase() {
+  if (charIndex > 0) {
+    roleElement.textContent = roles[roleIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(erase, 80);
+  } else {
+    roleIndex = (roleIndex + 1) % roles.length;
+    setTimeout(type, 500);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(type, 1000);
+  blinkCursor();
+});
+
+function blinkCursor() {
+  setInterval(() => {
+    cursor.style.opacity = cursor.style.opacity === "0" ? "1" : "0";
+  }, 500);
+}
+</script>
+
+</body>
+</html>
